@@ -6,5 +6,5 @@
 
 <br/>
 <div align="center">
-<img src="https://github.com/sulimanbadour1/SB_Blog/blob/main/public/logos/logo2.png?raw=true" width="240px"/>
+<img src="https://github.com/sulimanbadour1/SB_Blog/blob/main/public/logos/png/logo-black.png?raw=true" width="240px"/>
 </div>
