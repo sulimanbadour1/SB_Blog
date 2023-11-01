@@ -12,10 +12,18 @@ const Navbar = () => {
         <a href="https://github.com/sulimanbadour1" target="_blank">
           <Image src="/github.svg" alt="github" width={30} height={30} />
         </a>
-
-        <Image src="/linkedin.svg" alt="linkedin" width={30} height={30} />
-        <Image src="/behance.svg" alt="behance" width={30} height={30} />
-        <Image src="/youtube.svg" alt="youtube" width={30} height={30} />
+        <a href="https://www.linkedin.com/in/sulimanbadour/" target="_blank">
+          <Image src="/linkedin.svg" alt="linkedin" width={30} height={30} />
+        </a>
+        <a href="https://www.behance.net/sulimanbadour" target="_blank">
+          <Image src="/behance.svg" alt="behance" width={30} height={30} />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCU2AGYmAQM4jw4wezPOFhIA"
+          target="_blank"
+        >
+          <Image src="/youtube.svg" alt="youtube" width={30} height={30} />
+        </a>
       </div>
       <div className={styles.logo}>
         <Logo />
