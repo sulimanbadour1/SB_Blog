@@ -1,3 +1,46 @@
-.container{
-    background-color: red;
+
+.title{
+    margin: 50px 0;
+}
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+   
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius:10px;
+   
+    
+}
+
+.category.travel{
+    background-color: #57c4ff31; 
+    
+}
+.category.it{
+    background-color: #f2f2f2; 
+    
+}
+.category.academia{
+    background-color: #f2f2f2; 
+    
+}
+.category.engineering{
+    background-color: #f2f2f2; 
+    
+}
+
+.category.art{
+    background-color: #f2f2f2; 
+    
 }
