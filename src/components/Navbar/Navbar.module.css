@@ -28,6 +28,9 @@
   font-size: 16px;
   font-weight: 500;
 }
+.link:hover {
+ color: #eb0000;
+}
 
 @media screen and (max-width: 1280px) {
   .logo {
