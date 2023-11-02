@@ -11,7 +11,7 @@ const Card = () => {
       <div className={styles.textContainer}>
         <div className={styles.detail}>
           <span className={styles.date}>2.11.2023 -</span>
-          <span className={styles.category}>Travel</span>
+          <span className={styles.category}> Travel</span>
         </div>
         <Link href="/post">
           <h1>Title</h1>

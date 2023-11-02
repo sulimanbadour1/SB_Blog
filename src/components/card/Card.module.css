@@ -14,6 +14,7 @@
     object-fit: cover;
     border-radius: 10px;
 }
+
 .textContainer{
     flex: 1;
     display: flex;
@@ -40,10 +41,19 @@
     border-bottom: 2px solid #eb0000 ;
     width: max-content;
     padding: 4px 0;
+    font-weight: bold;
 }
 .link:hover{
     color: #eb0000;
+    font-weight: bolder;
     animation: forwards 2s ease-in-out;
-    border-bottom: 3px solid #eb0000;
+    border-bottom: 2px dashed #eb0000;
+  
+}
+
+@media screen and (max-width: 768px){
+ .imgContainer{
+     display: none;
+ }
     
 }
