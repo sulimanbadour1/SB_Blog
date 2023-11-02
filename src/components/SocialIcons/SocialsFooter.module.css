@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  } 
+  .social {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+  }
+
+  @media screen and (max-width: 640px) {
+    .social {
+     justify-content: center;
+     padding: 10px 0;
+    }
+  }

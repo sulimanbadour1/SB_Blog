@@ -14,13 +14,13 @@ const Card = () => {
           <span className={styles.category}> Travel</span>
         </div>
         <Link href="/post">
-          <h1>Title</h1>
+          <h1>Karlštejn Castle</h1>
         </Link>
 
         <p className={styles.desc}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-          odio nulla at qui vero rerum possimus odit tempore magni vel eius
-          quas! Unde facere hic officiis, vel ipsa amet commodi.
+          Perched near Prague, Karlštejn Castle is a Gothic gem from the 14th
+          century. Commissioned by Emperor Charles IV, it once safeguarded crown
+          jewels. Today, its medieval charm makes it a top Czech attraction.
         </p>
         <Link href="/post" className={styles.link}>
           Read More

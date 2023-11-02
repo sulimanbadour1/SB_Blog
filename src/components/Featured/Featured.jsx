@@ -19,7 +19,7 @@ const Featured = () => {
             Perched near Prague, Karlštejn Castle is a Gothic gem from the 14th
             century. Commissioned by Emperor Charles IV, it once safeguarded
             crown jewels. Today, its medieval charm makes it a top Czech
-            attraction
+            attraction.
           </p>
           <button className={styles.button}>Read More</button>
         </div>
