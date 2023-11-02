@@ -1,0 +1,49 @@
+.container{
+    margin-bottom: 50px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.imgContainer{
+    flex: 1;
+    height: 350px;
+    position: relative;
+}
+.image{
+    object-fit: cover;
+    border-radius: 10px;
+}
+.textContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.date{
+    color:gray;
+}
+
+.category{
+    color: #eb0000;
+    font-weight: 500;
+}
+
+.desc{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--softTextColor);
+}
+
+.link{
+    border-bottom: 2px solid #eb0000 ;
+    width: max-content;
+    padding: 4px 0;
+}
+.link:hover{
+    color: #eb0000;
+    animation: forwards 2s ease-in-out;
+    border-bottom: 3px solid #eb0000;
+    
+}
