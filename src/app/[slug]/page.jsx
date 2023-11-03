@@ -1,6 +1,7 @@
 import Menu from "@/components/Menu/Menu";
 import styles from "./page.module.css";
 import Image from "next/image";
+import Comments from "@/components/comments/Comments";
 
 const page = () => {
   return (
@@ -23,7 +24,33 @@ const page = () => {
         </div>
       </div>
       <div className={styles.content}>
-        <div className={styles.post}></div>
+        <div className={styles.post}>
+          <div className={styles.desc}>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iure
+              ut expedita! Ea dolor porro veritatis? Ipsa molestiae non magni
+              soluta, repudiandae rem! Officiis distinctio maxime nemo, minus
+              corrupti quibusdam.
+            </p>
+            <h2> Header </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iure
+              ut expedita! Ea dolor porro veritatis? Ipsa molestiae non magni
+              soluta, repudiandae rem! Officiis distinctio maxime nemo, minus
+              corrupti quibusdam.
+            </p>
+            <h3> Header </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi iure
+              ut expedita! Ea dolor porro veritatis? Ipsa molestiae non magni
+              soluta, repudiandae rem! Officiis distinctio maxime nemo, minus
+              corrupti quibusdam.
+            </p>
+          </div>
+          <div className={styles.comment}>
+            <Comments />
+          </div>
+        </div>
         <Menu />
       </div>
     </div>

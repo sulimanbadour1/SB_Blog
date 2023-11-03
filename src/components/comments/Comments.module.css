@@ -1,0 +1,77 @@
+.container{
+margin-top: 50px;
+}
+
+.title{
+    color: var(--softTextColor);
+    margin-bottom: 30px;
+}
+
+
+.write{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.input{
+    padding: 20px;
+    width: 80%;
+}
+
+.button{
+    padding: 12px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color:teal ;
+    color: white;
+}
+
+.button:hover{
+    background-color: #eb0000;
+    animation: reverse 1s infinite;
+}
+
+.comments{
+   margin-top: 50px;
+}
+.comment{
+   margin-bottom: 50px;
+
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.image{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--softTextColor);
+}
+
+.userName{
+    font-weight: 500;
+}
+.date{
+    font-size: 12px;
+}
+
+.desc{
+    color: var(--softTextColor);
+    font-size: 16px;
+    font-weight: 500;
+}
