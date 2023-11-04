@@ -18,8 +18,8 @@ const PersonalPage = async () => {
       <p className={styles.desc}>Here you can find the your personal info</p>
       <div className={styles.user}>
         {data.map((item) => (
-          <div className={styles.user}>
-            <img src={item.image} className={styles.image} />
+          <div className={styles.user} key={item.id}>
+            <img src={item.image} className={styles.image} alt="Profile" />
             <span className={styles.name}>Name : {item.name}</span>
             <span className={styles.name}>Email : {item.email}</span>
             <span className={styles.name}>Id: {item.id}</span>

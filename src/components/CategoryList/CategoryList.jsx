@@ -20,7 +20,7 @@ const CategoryList = async () => {
       <div className={styles.categories}>
         {data?.map((item) => (
           <Link
-            href="/blog?cat=style"
+            href={`/blog?cat=${item.title}`}
             className={`${styles.category} ${styles.style}`}
             key={item._id}
           >
