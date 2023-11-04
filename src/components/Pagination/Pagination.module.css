@@ -14,3 +14,8 @@
    cursor: pointer;
     border-radius: 5px;
 }
+
+.button:disabled{
+    background-color: #eb000052;
+    cursor: not-allowed;
+}

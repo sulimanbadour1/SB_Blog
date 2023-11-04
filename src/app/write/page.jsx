@@ -4,6 +4,8 @@ import styles from "./Write.module.css";
 import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 // modules
 const modules = {
   toolbar: [
@@ -19,10 +21,23 @@ const modules = {
   ],
 };
 const Write = () => {
+  const { status } = useSession();
+
+  const router = useRouter();
+
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
+  // auth check
+  if (status === "loading") {
+    return <div className={styles.loading}>Loading...</div>;
+  }
+  if (status === "unauthenticated") {
+    router.push("/login");
+  }
+
   return (
     <div className={styles.container}>
+      {/* {status === "unauthenticated" && router.push("/login")} */}
       <input className={styles.input} type="text" placeholder="Title" />
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>

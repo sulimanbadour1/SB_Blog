@@ -14,10 +14,18 @@ const Footer = () => {
             <Logo />
           </div>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Reprehenderit repellendus dicta, repellat, modi quam sed laudantium
-            dolorem commodi aut tempore aperiam enim praesentium voluptas,
-            voluptatem est provident soluta quos animi?
+            ⭐ Suliman's Personal Blog ⭐<br />
+            <br />
+            This is my digital sanctuary, a canvas for thoughts, ideas.
+            <br />
+            <br />
+            📣 Your Words, Our Canvas. Write, Share, Inspire.✍️
+            <br />
+            <br />
+            <Link href="/login" className={styles.join}>
+              Join
+            </Link>{" "}
+            the community where your voice becomes an art piece.
           </p>
           <div className={styles.icons}>
             <SocialsFooter />
@@ -42,7 +50,7 @@ const Footer = () => {
           <div className={styles.list}>
             <span className={styles.listTitle}>Tags</span>
             <Link href="/" className={styles.linkStyle}>
-              I.T
+              Coding
             </Link>
             <Link href="/" className={styles.linkStyle}>
               Art
@@ -52,6 +60,9 @@ const Footer = () => {
             </Link>
             <Link href="/" className={styles.linkStyle}>
               Travel
+            </Link>
+            <Link href="/" className={styles.linkStyle}>
+              Science
             </Link>
           </div>
           <div className={styles.list}>
