@@ -7,7 +7,7 @@
 
 SB Blog is a platform that allows users to write and upload their own blogs. It is built using Next.js, React, React Quill for rich text editing, Next Auth for authentication, Prisma for database access, and MongoDB as the database.
 
-![SB Blog Logo](https://github.com/sulimanbadour1/SB_Blog/blob/main/public/logos/png/logo-black.png?raw=true)
+![SB Blog Logo](https://github.com/sulimanbadour1/SB_Blog/blob/main/public/screenshots/landing.JPG?raw=true)
 
 ## Features
 
@@ -45,3 +45,8 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 For any questions or inquiries, please contact Suliman Badour.
+
+<br/>
+<div align="center">
+  <img src="https://github.com/sulimanbadour1/SB_Blog/blob/main/public/logos/png/logo-black.png?raw=true" width="240px"/>
+</div>
