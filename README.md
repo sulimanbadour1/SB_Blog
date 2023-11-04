@@ -1,11 +1,14 @@
 # SB Blog
 
+[![wakatime](https://wakatime.com/badge/user/d7fffb39-631e-454c-9cce-bb60e92d14c5/project/018b86a7-5378-4be5-b35d-e3dfdf2d90f7.svg)](https://wakatime.com/badge/user/d7fffb39-631e-454c-9cce-bb60e92d14c5/project/018b86a7-5378-4be5-b35d-e3dfdf2d90f7)
+
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Prisma](https://img.shields.io/badge/prisma-%23323330.svg?style=for-the-badge&logo=prisma&logoColor=%23E10098)
 ![MongoDB](https://img.shields.io/badge/mongodb-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 SB Blog is a platform that allows users to write and upload their own blogs. It is built using Next.js, React, React Quill for rich text editing, Next Auth for authentication, Prisma for database access, and MongoDB as the database.
+</br>
 
 ![SB Landing Page](https://github.com/sulimanbadour1/SB_Blog/blob/main/public/screenshots/landing.JPG?raw=true)
 
