@@ -50,8 +50,12 @@
     width: max-content;
     cursor: pointer;
     font-weight: bold;
-
+    font-size: 14px;
 }
+.button:hover{
+  background-color: #eb0f0f65;
+  color: white;
+ }
 
 @media screen and (max-width: 1280px) {
     .title {

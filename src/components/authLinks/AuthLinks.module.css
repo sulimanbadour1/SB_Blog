@@ -1,6 +1,12 @@
 .link{
     cursor: pointer;
     z-index: 1;
+    border:1px solid gray; 
+    padding: 8px 8px;
+    border-radius: 10%
+}
+.link:hover{
+ background-color: #adadad65;
 }
 .burger{
     width: 20px;
