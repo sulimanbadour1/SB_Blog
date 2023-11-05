@@ -3,16 +3,16 @@ import Link from "next/link";
 import React from "react";
 import styles from "./MenuPosts.module.css";
 
-const MenuPosts = ({ withImages }) => {
+const MenuPosts = async ({ withImages, item, key }) => {
   return (
     <>
-      <div className={styles.items}>
-        <Link href="/blog" className={styles.item}>
+      <div className={styles.items} key={key}>
+        <Link href={`/posts/${item.slug}`} className={styles.item}>
           {withImages && (
             <div className={styles.imageContainer}>
               <Image
-                src="/karl.webp"
-                alt="Karl"
+                src={item?.img}
+                alt="image"
                 fill
                 className={styles.image}
               />
@@ -21,63 +21,14 @@ const MenuPosts = ({ withImages }) => {
 
           <div className={styles.textContainer}>
             <span className={`${styles.category} ${styles.travel}`}>
-              Travel
+              {item?.catSlug}
             </span>
-            <h3 className={styles.postTitle}>
-              Perched near Prague, Karlštejn Castle is a Gothic gem from the
-              14th century.
-            </h3>
+            <h3 className={styles.postTitle}>{item?.title}</h3>
             <div className={styles.details}>
-              <span className={styles.username}>Jhon Doe</span>
-              <span className={styles.date}> - 2.11.2023</span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/blog" className={styles.item}>
-          {withImages && (
-            <div className={styles.imageContainer}>
-              <Image
-                src="/karl.webp"
-                alt="Karl"
-                fill
-                className={styles.image}
-              />
-            </div>
-          )}
-          <div className={styles.textContainer}>
-            <span className={`${styles.category} ${styles.culture}`}>
-              Culture
-            </span>
-            <h3 className={styles.postTitle}>
-              Perched near Prague, Karlštejn Castle is a Gothic gem from the
-              14th century.
-            </h3>
-            <div className={styles.details}>
-              <span className={styles.username}>Jhon Doe</span>
-              <span className={styles.date}> - 2.11.2023</span>
-            </div>
-          </div>
-        </Link>
-        <Link href="/blog" className={styles.item}>
-          {withImages && (
-            <div className={styles.imageContainer}>
-              <Image
-                src="/karl.webp"
-                alt="Karl"
-                fill
-                className={styles.image}
-              />
-            </div>
-          )}
-          <div className={styles.textContainer}>
-            <span className={`${styles.category} ${styles.art}`}>Art</span>
-            <h3 className={styles.postTitle}>
-              Perched near Prague, Karlštejn Castle is a Gothic gem from the
-              14th century.
-            </h3>
-            <div className={styles.details}>
-              <span className={styles.username}>Jhon Doe</span>
-              <span className={styles.date}> - 2.11.2023</span>
+              <span className={styles.date}>
+                {item.createdAt.substring(0, 10)}
+              </span>
+              <span className={styles.views}> Views : {item?.views}</span>
             </div>
           </div>
         </Link>

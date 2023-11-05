@@ -19,6 +19,10 @@ const page = async ({ params }) => {
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{data?.title}</h1>
+          <div className={styles.detail}>
+            <span className={styles.date}> Views: {data.views} -</span>
+            <span className={styles.category}> {data.catSlug}</span>
+          </div>
           <div className={styles.user}>
             {data?.user?.image && (
               <div className={styles.userImage}>
@@ -60,7 +64,7 @@ const page = async ({ params }) => {
             <Comments postSlug={slug} />
           </div>
         </div>
-        <Menu />
+        {/* <Menu postSlug={slug} /> */}
       </div>
     </div>
   );
