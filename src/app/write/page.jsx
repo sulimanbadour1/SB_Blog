@@ -18,12 +18,17 @@ const modules = {
   toolbar: [
     [{ font: [] }],
     [{ header: [1, 2, 3, 4, 5, 6, false] }],
+    [{ header: 1 }, { header: 2 }], // custom button values
     ["bold", "italic", "underline", "strike"],
     [{ color: [] }, { background: [] }],
     [{ script: "sub" }, { script: "super" }],
     ["blockquote", "code-block"],
     [{ list: "ordered" }, { list: "bullet" }],
     ["clean"],
+    [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+    [{ direction: "rtl" }], // text direction
+    ["link"],
+    [{ align: [] }],
   ],
 };
 const storage = getStorage(app);
@@ -119,6 +124,11 @@ const Write = () => {
         placeholder="Title"
         onChange={(e) => setTitle(e.target.value)}
       />
+
+      <span id="span" className={styles.options}>
+        Please select a category
+      </span>
+
       <select
         className={styles.select}
         onChange={(e) => setCatSlug(e.target.value)}
@@ -134,6 +144,7 @@ const Write = () => {
         <option value="Engineering">Engineering</option>
         <option value="Life">Life</option>
       </select>
+      <span className={styles.span}>Add Media (images)</span>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
           <Image

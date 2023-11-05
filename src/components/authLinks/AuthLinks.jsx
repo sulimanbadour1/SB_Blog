@@ -18,9 +18,9 @@ const AuthLinks = () => {
           <Link href="/write" className={styles.link}>
             Write
           </Link>
-          <Link href="/profile" className={styles.link}>
+          {/* <Link href="/profile" className={styles.link}>
             Profile
-          </Link>
+          </Link> */}
           <span className={styles.link} onClick={signOut}>
             Logout
           </span>

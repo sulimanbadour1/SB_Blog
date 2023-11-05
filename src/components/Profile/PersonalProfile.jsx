@@ -16,7 +16,7 @@ const PersonalPage = async () => {
     <div className={styles.container}>
       <h1 className={styles.text}>Personal Page</h1>
       <p className={styles.desc}>Here you can find the your personal info</p>
-      <div className={styles.user}>
+      {/* <div className={styles.user}>
         {data.map((item) => (
           <div className={styles.user} key={item.id}>
             <img src={item.image} className={styles.image} alt="Profile" />
@@ -25,7 +25,7 @@ const PersonalPage = async () => {
             <span className={styles.name}>Id: {item.id}</span>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

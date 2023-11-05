@@ -21,7 +21,9 @@
   .plusBtn{
     width: 24px;
     height: 24px;
-    object-fit: cover;
+    object-fit: fill;
+  
+
   }
   .button,
   .addButton {
@@ -29,12 +31,13 @@
     height: 36px;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid var(--textColor);
+    border: 1px solid var(--softTextColor);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     object-fit: cover;
+    
   }
   
   .addButton {
@@ -83,7 +86,7 @@
     font-weight: 600;
   }
   .select{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 10px 10px;
     margin-left: 50px;
     width: max-content;
@@ -92,11 +95,25 @@
     font-weight: bold;
     border-radius: 4px;
     color: var(--softTextColor);
-   
-    
+    cursor: pointer;
+  }
+  .options{
+  color: var(--softTextColor);
+    font-weight: bolder;
+   margin-bottom: 16px;
+   padding-left: 48px;
+   font-size: 14px;
+  text-transform: uppercase;
   }
   
-
+.span{
+  color: var(--softTextColor);
+  font-weight: bolder;
+ margin-bottom: 16px;
+ padding-left: 48px;
+ font-size: 14px;
+text-transform: uppercase;
+}
   @media screen and (max-width: 768px) {
     .plusBtn{
       
