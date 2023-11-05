@@ -27,23 +27,25 @@ export const GET = async (req) => {
 
 // CREATE A COMMENT
 // GET ALL COMMENTS OF A POST
+// CREATE A COMMENT
 export const POST = async (req) => {
-  const session = getAuthSession();
+  const session = await getAuthSession();
+
   if (!session) {
     return new NextResponse(
-      JSON.stringify({ message: "Not authenticated" }, { status: 401 })
+      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
     );
   }
 
   try {
     const body = await req.json();
     const comment = await prisma.comment.create({
-      body: { ...body, userEmail: session.user.email },
+      data: { ...body, userEmail: session.user.email },
     });
 
     return new NextResponse(JSON.stringify(comment, { status: 200 }));
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     return new NextResponse(
       JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
     );

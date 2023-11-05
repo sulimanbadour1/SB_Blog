@@ -18,6 +18,7 @@ SB Blog is a platform that allows users to write and upload their own blogs. It 
 - Rich text editor powered by React Quill.
 - Secure authentication with Next Auth.
 - Backed by a Prisma-powered MongoDB database.
+- Using FireBase to store the data.
 
 ## Getting Started
 
