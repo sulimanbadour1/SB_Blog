@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import styles from "./Featured.module.css";
+import Link from "next/link";
 
 const Featured = () => {
   return (
@@ -21,7 +23,9 @@ const Featured = () => {
             crown jewels. Today, its medieval charm makes it a top Czech
             attraction.
           </p>
-          <button className={styles.button}>Read More</button>
+          <Link href="/posts/karl">
+            <button className={styles.button}>Read More</button>
+          </Link>
         </div>
       </div>
     </div>

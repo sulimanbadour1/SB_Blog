@@ -3,10 +3,12 @@ import Image from "next/image";
 import styles from "./about.module.css";
 import Skills from "@/components/Skills/Skills";
 import Link from "next/link";
+import ScrollBar from "@/components/Isights/insights";
 
 const page = () => {
   return (
     <>
+      <ScrollBar />
       <section className={styles.section}>
         <div className={styles.imageContainer}>
           <Image
@@ -21,7 +23,8 @@ const page = () => {
         <div className={styles.contentContainer}>
           <h2>Reach for the Stars, Persevere, Excel!</h2>
           <p>
-            Hello, I'm Suliman, a front-end developer from Prague, Czechia.
+            Hello, I'm Suliman, a front-end developer based in Prague, Czechia.
+            <br />
             Passionate about UI effects and animations, I strive to create
             intuitive and dynamic user experiences. Committed to continual
             learning, I consistently hone my skills to deliver innovative and

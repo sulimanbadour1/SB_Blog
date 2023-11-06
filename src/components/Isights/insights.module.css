@@ -1,0 +1,41 @@
+.outerDiv {
+    width: 100%;
+    background-color: var(--textColor)/* bg-accent color */; /* You need to define the actual color value for bg-accent */
+    color: var(--softBg)/* text-light color */; /* Define the actual color value for text-light */
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.innerDiv {
+    animation: roll 14s linear infinite;
+    width: 100%;
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-weight: 600; /* font-semibold */
+    letter-spacing: wider;
+    font-size: 0.875rem; /* text-sm */
+}
+@media screen and (min-width: 640px) { /* sm breakpoint */
+    .innerDiv {
+        padding-top: 0.75rem; /* sm:py-3 */
+        padding-bottom: 0.75rem; /* sm:py-3 */
+        font-size: 1rem; /* sm:text-base */
+    }
+}
+
+.spanClass {
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+@keyframes roll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
