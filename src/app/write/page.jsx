@@ -28,6 +28,7 @@ const modules = {
     [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
     [{ direction: "rtl" }], // text direction
     ["link"],
+
     [{ align: [] }],
   ],
 };
@@ -126,7 +127,7 @@ const Write = () => {
       />
 
       <span id="span" className={styles.options}>
-        Please select a category
+        Please select a category for your post
       </span>
 
       <select
@@ -144,7 +145,7 @@ const Write = () => {
         <option value="Engineering">Engineering</option>
         <option value="Life">Life</option>
       </select>
-      <span className={styles.span}>Add Media (images)</span>
+      <span className={styles.span}>Add Media, `Hero Image for your post`</span>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
           <Image

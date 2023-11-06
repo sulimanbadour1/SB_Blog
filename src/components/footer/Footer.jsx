@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import styles from "./Footer.module.css";
 import Logo from "../Logo/logo";
@@ -37,46 +38,62 @@ const Footer = () => {
             <Link href="/" className={styles.linkStyle}>
               Home
             </Link>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/blog" className={styles.linkStyle}>
               Blog
             </Link>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/about" className={styles.linkStyle}>
               About
             </Link>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/contact" className={styles.linkStyle}>
               Contact
             </Link>
           </div>
           <div className={styles.list}>
             <span className={styles.listTitle}>Tags</span>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/blog?cat=Coding" className={styles.linkStyle}>
               Coding
             </Link>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/blog?cat=Art" className={styles.linkStyle}>
               Art
             </Link>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/blog?cat=Engineering" className={styles.linkStyle}>
               Engineering
             </Link>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/blog?cat=Travel" className={styles.linkStyle}>
               Travel
             </Link>
-            <Link href="/" className={styles.linkStyle}>
+            <Link href="/blog?cat=Science" className={styles.linkStyle}>
               Science
             </Link>
           </div>
           <div className={styles.list}>
             <span className={styles.listTitle}>Socials</span>
-            <Link className={styles.linkStyle} href="/">
+            <Link
+              target="_blank"
+              className={styles.linkStyle}
+              href="https://github.com/sulimanbadour1"
+            >
               Github
             </Link>
-            <Link className={styles.linkStyle} href="/">
+            <Link
+              target="_blank"
+              className={styles.linkStyle}
+              href="https://www.linkedin.com/in/sulimanbadour/"
+            >
               LinkedIn
             </Link>
-            <Link className={styles.linkStyle} href="/">
+            <Link
+              target="_blank"
+              className={styles.linkStyle}
+              href="https://www.behance.net/sulimanbadour"
+            >
               Behance
             </Link>
-            <Link className={styles.linkStyle} href="/">
+            <Link
+              target="_blank"
+              className={styles.linkStyle}
+              href="https://www.youtube.com/channel/UCU2AGYmAQM4jw4wezPOFhIA"
+            >
               YouTube
             </Link>
           </div>
