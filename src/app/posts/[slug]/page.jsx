@@ -7,7 +7,7 @@ const getData = async (slug) => {
     cache: "no-store",
   });
   if (!res.ok) {
-    throw new Error(res.statusText, { message: "Failed to fetch categories" });
+    throw new Error(res.statusText, { message: "Failed to fetch post" });
   }
   return res.json();
 };
@@ -60,6 +60,7 @@ const page = async ({ params }) => {
             className={styles.desc}
             dangerouslySetInnerHTML={{ __html: data?.desc }}
           />
+
           <div className={styles.comment}>
             <Comments postSlug={slug} />
           </div>

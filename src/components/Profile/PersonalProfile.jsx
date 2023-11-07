@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./style.module.css";
+import { useSession } from "next-auth/react";
 
 const getData = async () => {
   const res = await fetch("http://localhost:3000/api/profile", {
@@ -12,6 +13,7 @@ const getData = async () => {
 };
 const PersonalPage = async () => {
   const data = await getData();
+
   return (
     <div className={styles.container}>
       <h1 className={styles.text}>Personal Page</h1>

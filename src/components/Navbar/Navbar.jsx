@@ -18,6 +18,9 @@ const Navbar = () => {
         <Link href="/" className={styles.link}>
           Home
         </Link>
+        <Link href="/projects" className={styles.link}>
+          Projects
+        </Link>
         <Link href="/about" className={styles.link}>
           About
         </Link>

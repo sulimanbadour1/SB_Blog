@@ -16,18 +16,21 @@ const page = () => {
           <h1 className={styles.title}>Get In Touch</h1>
           <input
             name="name"
+            required
             type="text"
             className={styles.feedbackInput}
             placeholder="Name"
           />
           <input
             name="email"
+            required
             type="text"
             className={styles.feedbackInput}
             placeholder="Email"
           />
           <textarea
             name="text"
+            required
             className={styles.feedbackInput}
             placeholder="Message"
             rows={4}
