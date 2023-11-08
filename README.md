@@ -10,7 +10,7 @@
 SB Blog is a platform that allows users to write and upload their own blogs. It is built using Next.js, React, React Quill for rich text editing, Next Auth for authentication, Prisma for database access, and MongoDB as the database.
 </br>
 
-![SB Landing Page](https://github.com/sulimanbadour1/SB_Blog/blob/main/public/screenshots/landing.JPG?raw=true)
+![SB Landing Page](https://github.com/sulimanbadour1/SB_Blog/blob/main/public/screenshots/fullpage.jpeg?raw=true)
 
 ## Features
 
