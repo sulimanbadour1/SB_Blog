@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-   
+    gap: 20px;
   }
   
   .select{
@@ -15,7 +15,7 @@
   .editor {
     display: flex;
     gap: 20px;
-    height: 700px;
+    height: 800px;
     position: relative;
   }
   .plusBtn{
@@ -27,40 +27,37 @@
   }
   .button,
   .addButton {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    width: 68px;
+    height: 38px;
+    border-radius: 10%;
     background-color: transparent;
     border: 1px solid var(--softTextColor);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     object-fit: cover;
-    
+    border-color: var(--textColor);
   }
   
   .addButton {
-    border-color: #1a8917;
+    border-color: var(--textColor);
   }
   
   .add {
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 10px;
     background-color: var(--bg);
-    position: absolute;
+    position: relative;
     z-index: 999;
-    width: 100%;
-    left: 50px;
   }
   
   .input{
-    padding: 50px;
+    padding: 30px;
     font-size: 64px;
     border: none;
     outline: none;
     background-color: transparent;
     color: var(--textColor);
+   
   }
   
   .input::placeholder{
@@ -72,23 +69,38 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
+
+
+
   
-  .publish{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #1a8917;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-    font-weight: 600;
+.span{
+color: var(--softTextColor);
+font-weight: bolder;
+font-size: 12px;
+padding-left: 18px;
+}
+
+.intro{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: start;
+  margin-top: 36px;
+  
+}
+.options{
+  color: var(--softTextColor);
+  font-weight: bolder;
+  font-size: 12px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+  
   }
   .select{
-    margin-bottom: 40px;
-    padding: 10px 10px;
-    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
     width: max-content;
     background-color: transparent;
     border: 1px solid var(--textColor);
@@ -97,30 +109,58 @@
     color: var(--softTextColor);
     cursor: pointer;
   }
-  .options{
-  color: var(--softTextColor);
-    font-weight: bolder;
-   margin-bottom: 16px;
-   padding-left: 48px;
-   font-size: 14px;
-  text-transform: uppercase;
+  .intro1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 18px;
   }
-  
-.span{
-  color: var(--softTextColor);
-  font-weight: bolder;
- margin-bottom: 16px;
- padding-left: 48px;
- font-size: 14px;
-text-transform: uppercase;
-}
+  .intro2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 18px;
+   
+    
+   
+  }
   @media screen and (max-width: 768px) {
-    .plusBtn{
-      
+    .intro{
+      gap: 0px;
+     padding: 0px;
     }
   }
 
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
 
+  }
+  .publish{
+    width: 100%;
+    background-color:transparent;
+    border:2px solid var(--textColor);
+    outline: none;
+    border: 1px solid var(--textColor);
+    border-radius:5px;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+    width: 50%;
+    color: var(--textColor);
+    cursor: pointer;
+  }
+  .publish:hover{
+    background-color:#eb0000;
+     color: white;
+  }
 
 
 

@@ -112,79 +112,108 @@ const Write = () => {
 
     if (res.status === 200) {
       const data = await res.json();
+      {
+        toast.success("Post Published");
+      }
       router.push(`/posts/${data.slug}`);
     }
   };
 
   return (
     <div className={styles.container}>
+      <div className={styles.intro}>
+        <div className={styles.intro1}>
+          <span id="span" className={styles.options}>
+            select category
+          </span>
+
+          <select
+            className={styles.select}
+            onChange={(e) => setCatSlug(e.target.value)}
+          >
+            <option value="Style" className={styles.option}>
+              Style
+            </option>
+            <option value="Coding" className={styles.option}>
+              Coding
+            </option>
+            <option value="Travel" className={styles.option}>
+              Travel
+            </option>
+            <option value="Science">Science</option>
+            <option value="Art">Art</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Life">Life</option>
+          </select>
+        </div>
+        <div className={styles.intro1}>
+          <span className={styles.span}>Upload Image</span>
+          <div className={styles.intro2}>
+            <button className={styles.button} onClick={() => setOpen(!open)}>
+              <Image
+                src="/buttons/add.svg"
+                width={20}
+                height={20}
+                className={styles.plusBtn}
+                alt="plus"
+              />
+            </button>
+            {open && (
+              <div className={styles.add}>
+                <input
+                  type="file"
+                  id="file"
+                  onChange={(e) => {
+                    setFile(e.target.files[0]);
+                  }}
+                  style={{ display: "none" }}
+                />
+
+                <button className={styles.addButton}>
+                  <label htmlFor="file">
+                    <Image
+                      src="/buttons/camera.svg"
+                      width={18}
+                      height={18}
+                      alt="image"
+                    />
+                  </label>
+                </button>
+
+                <button className={styles.addButton}>
+                  <label htmlFor="file">
+                    <Image
+                      src="/buttons/link.svg"
+                      width={18}
+                      height={18}
+                      alt="image"
+                    />
+                  </label>
+                </button>
+                <button className={styles.addButton}>
+                  <label htmlFor="file">
+                    <Image
+                      src="/buttons/video.svg"
+                      width={18}
+                      height={18}
+                      alt="image"
+                    />
+                  </label>
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
       {/* {status === "unauthenticated" && router.push("/login")} */}
       <input
         className={styles.input}
         type="text"
-        placeholder="Title"
+        placeholder="Add Title..."
         onChange={(e) => setTitle(e.target.value)}
       />
 
-      <span id="span" className={styles.options}>
-        Please select a category for your post
-      </span>
-
-      <select
-        className={styles.select}
-        onChange={(e) => setCatSlug(e.target.value)}
-      >
-        <option value="Coding" className={styles.option}>
-          Coding
-        </option>
-        <option value="Travel" className={styles.option}>
-          Travel
-        </option>
-        <option value="Science">Science</option>
-        <option value="Art">Art</option>
-        <option value="Engineering">Engineering</option>
-        <option value="Life">Life</option>
-      </select>
-      <span className={styles.span}>Add Media, `Hero Image for your post`</span>
       <div className={styles.editor}>
-        <button className={styles.button} onClick={() => setOpen(!open)}>
-          <Image
-            src="/plus.png"
-            width={24}
-            height={24}
-            className={styles.plusBtn}
-            alt="plus"
-          />
-        </button>
-        {open && (
-          <div className={styles.add}>
-            <input
-              type="file"
-              id="file"
-              onChange={(e) => {
-                setFile(e.target.files[0]);
-              }}
-              style={{ display: "none" }}
-            />
-
-            <button className={styles.addButton}>
-              <label htmlFor="file">
-                <Image src="/image.png" width={18} height={18} alt="image" />
-              </label>
-            </button>
-
-            <button className={styles.addButton}>
-              <label htmlFor="file">
-                <Image src="/external.png" width={18} height={18} alt="image" />
-              </label>
-            </button>
-            <button className={styles.addButton}>
-              <label htmlFor="file">
-                <Image src="/video.png" width={18} height={18} alt="image" />
-              </label>
-            </button>
-          </div>
-        )}
         <ReactQuill
           className={styles.textArea}
           theme="snow"
@@ -194,10 +223,12 @@ const Write = () => {
           placeholder="Write your Post..."
         />
       </div>
-      <button onClick={handleSubmit} className={styles.publish}>
-        Publish
-        {toast.success("Post Published")}
-      </button>
+
+      <div className={styles.footer}>
+        <button onClick={handleSubmit} className={styles.publish}>
+          Post
+        </button>
+      </div>
     </div>
   );
 };
