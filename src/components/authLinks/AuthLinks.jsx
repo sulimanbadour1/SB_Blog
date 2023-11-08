@@ -17,12 +17,12 @@ const AuthLinks = () => {
         </Link>
       ) : (
         <>
-          <Link href="/write" className={styles.link}>
+          {/* <Link href="/write" className={styles.link}>
             Write
-          </Link>
-          {/* <div className={styles.dropdown}>
+          </Link> */}
+          <div className={styles.dropdown}>
             <button className={styles.dropbtn} onClick={() => setList(!list)}>
-              Write
+              Profile
             </button>
             {list && (
               <div
@@ -31,15 +31,15 @@ const AuthLinks = () => {
               >
                 <div className={styles.items}>
                   <Link href="/write" className={styles.link1}>
-                    Post
+                    Write
                   </Link>
-                  <Link href="/projects" className={styles.link1}>
-                    Project
+                  <Link href="/profile" className={styles.link1}>
+                    Profile
                   </Link>
                 </div>
               </div>
             )}
-          </div> */}
+          </div>
 
           <span className={styles.link} onClick={signOut}>
             Logout

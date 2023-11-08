@@ -44,12 +44,18 @@ const Write = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
+  const [summ, setSumm] = useState("");
   const [catSlug, setCatSlug] = useState("");
   // auth check
 
   // upload image to firebase
   useEffect(() => {
     const upload = () => {
+      // check the file is not null and has a type of image or video
+      if (!file.type.startsWith("image/") && !file.type.startsWith("video/")) {
+        toast.error("Only images and videos are allowed.");
+        return;
+      }
       const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
 
@@ -61,9 +67,11 @@ const Write = () => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           console.log("Upload is " + progress + "% done");
+          toast.success("Upload is " + parseInt(progress) + "% done");
           switch (snapshot.state) {
             case "paused":
               console.log("Upload is paused");
+              toast.error("Upload is paused");
               break;
             case "running":
               console.log("Upload is running");
@@ -83,7 +91,11 @@ const Write = () => {
   }, [file]);
   // upload image to firebase
   if (status === "loading") {
-    return <div className={styles.loading}>Loading...</div>;
+    return (
+      <>
+        <div className={styles.loading}>Loading...</div>
+      </>
+    );
   }
   if (status === "unauthenticated") {
     router.push("/login");
@@ -98,17 +110,39 @@ const Write = () => {
       .replace(/^-+|-+$/g, "");
   // publish post
   const handleSubmit = async () => {
+    if (title.length < 10) {
+      toast.error("Title must be at least 10 characters long.");
+      return;
+    }
+    if (!media) {
+      toast.error("Please upload a photo.");
+      return;
+    }
+    if (!catSlug) {
+      toast.error("Please select a category.");
+      return;
+    }
+    if (!summ) {
+      toast.error("Please write a small descritpion.");
+      return;
+    }
+
+    if (!value) {
+      toast.error("Please write something.");
+      return;
+    }
     const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
         desc: value,
         img: media,
+        smallDesc: summ,
         slug: slugify(title),
         catSlug: catSlug || "style", //If not selected, choose the general category
       }),
     });
-    console.log(res);
+    // console.log(res);
 
     if (res.status === 200) {
       const data = await res.json();
@@ -118,41 +152,52 @@ const Write = () => {
       router.push(`/posts/${data.slug}`);
     }
   };
+  const notify = () => toast.success("Please select a category");
+  const image = () => toast.success("Please select a category");
 
   return (
     <div className={styles.container}>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="Add Title..."
+        required
+        min={6}
+        onChange={(e) => setTitle(e.target.value)}
+      />
       <div className={styles.intro}>
         <div className={styles.intro1}>
           <span id="span" className={styles.options}>
             select category
           </span>
-
-          <select
-            className={styles.select}
-            onChange={(e) => setCatSlug(e.target.value)}
-          >
-            <option value="Style" className={styles.option}>
-              Style
-            </option>
-            <option value="Coding" className={styles.option}>
-              Coding
-            </option>
-            <option value="Travel" className={styles.option}>
-              Travel
-            </option>
-            <option value="Science" className={styles.option}>
-              Science
-            </option>
-            <option value="Art" className={styles.option}>
-              Art
-            </option>
-            <option value="Engineering" className={styles.option}>
-              Engineering
-            </option>
-            <option value="Life" className={styles.option}>
-              Life
-            </option>
-          </select>
+          <div>
+            <select
+              className={styles.select}
+              onChange={(e) => setCatSlug(e.target.value)}
+            >
+              <option value="Style" className={styles.option}>
+                Style
+              </option>
+              <option value="Coding" className={styles.option}>
+                Coding
+              </option>
+              <option value="Travel" className={styles.option}>
+                Travel
+              </option>
+              <option value="Science" className={styles.option}>
+                Science
+              </option>
+              <option value="Art" className={styles.option}>
+                Art
+              </option>
+              <option value="Engineering" className={styles.option}>
+                Engineering
+              </option>
+              <option value="Life" className={styles.option}>
+                Life
+              </option>
+            </select>
+          </div>
         </div>
         <div className={styles.intro1}>
           <span className={styles.span}>Upload Image</span>
@@ -213,13 +258,15 @@ const Write = () => {
           </div>
         </div>
       </div>
-      {/* {status === "unauthenticated" && router.push("/login")} */}
       <input
-        className={styles.input}
+        className={styles.descInput}
         type="text"
-        placeholder="Add Title..."
-        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Add Small Description here..."
+        required
+        min={6}
+        onChange={(e) => setSumm(e.target.value)}
       />
+      {/* {status === "unauthenticated" && router.push("/login")} */}
 
       <div className={styles.editor}>
         <ReactQuill
@@ -227,6 +274,8 @@ const Write = () => {
           theme="snow"
           modules={modules}
           value={value}
+          min={10}
+          required
           onChange={setValue}
           placeholder="Write your Post..."
         />

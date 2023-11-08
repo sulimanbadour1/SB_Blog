@@ -4,18 +4,31 @@ import React from "react";
 import styles from "./MenuPosts.module.css";
 
 const MenuPosts = async ({ withImages, item, key }) => {
+  const isVideo = item.img && item.img.includes("Video");
   return (
     <>
       <div className={styles.items} key={key}>
         <Link href={`/posts/${item.slug}`} className={styles.item}>
           {withImages && (
             <div className={styles.imageContainer}>
-              <Image
-                src={item?.img}
-                alt="image"
-                fill
-                className={styles.image}
-              />
+              {isVideo ? (
+                <video
+                  controls={false}
+                  muted
+                  autoPlay
+                  loop
+                  className={styles.video}
+                >
+                  <source src={item.img} type="video/mp4" />
+                </video>
+              ) : (
+                <Image
+                  src={item.img}
+                  alt="item"
+                  layout="fill"
+                  className={styles.image}
+                />
+              )}
             </div>
           )}
 

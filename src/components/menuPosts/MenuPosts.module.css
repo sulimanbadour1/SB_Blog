@@ -46,6 +46,15 @@
     border:3px solid lightgray ;
     object-fit: cover;
   }
+  .video{
+    width: 70px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border:3px solid lightgray ;
+    object-fit: cover;
+    position: relative;
+   
+  }
   .textContainer{
     flex:4;
     display: flex;

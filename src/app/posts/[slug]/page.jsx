@@ -14,6 +14,7 @@ const getData = async (slug) => {
 const page = async ({ params }) => {
   const { slug } = params;
   const data = await getData(slug);
+  const isVideo = data.img && data.img.includes("Video");
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
@@ -43,14 +44,14 @@ const page = async ({ params }) => {
             </div>
           </div>
         </div>
-        {data?.img && (
+
+        {isVideo ? (
+          <video controls muted autoPlay loop className={styles.videoCont}>
+            <source src={data.img} type="video/mp4" />
+          </video>
+        ) : (
           <div className={styles.imageContainer}>
-            <Image
-              src={data.img}
-              fill
-              className={styles.image}
-              alt="Hero Image"
-            />
+            <Image src={data.img} alt="item" fill className={styles.image} />
           </div>
         )}
       </div>
