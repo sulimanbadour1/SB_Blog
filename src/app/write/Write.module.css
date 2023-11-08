@@ -49,6 +49,10 @@
     position: relative;
     z-index: 999;
   }
+  .option{
+    background-color: var(--softBg);
+    
+  }
   
   .input{
     padding: 30px;
@@ -71,8 +75,6 @@
   }
 
 
-
-  
 .span{
 color: var(--softTextColor);
 font-weight: bolder;
@@ -96,8 +98,7 @@ padding-left: 18px;
   display: flex;
   flex-direction: row;
  justify-content: center;
-  
-  }
+}
   .select{
     display: flex;
     flex-direction: row;

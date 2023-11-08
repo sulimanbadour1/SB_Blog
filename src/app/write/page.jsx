@@ -140,10 +140,18 @@ const Write = () => {
             <option value="Travel" className={styles.option}>
               Travel
             </option>
-            <option value="Science">Science</option>
-            <option value="Art">Art</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Life">Life</option>
+            <option value="Science" className={styles.option}>
+              Science
+            </option>
+            <option value="Art" className={styles.option}>
+              Art
+            </option>
+            <option value="Engineering" className={styles.option}>
+              Engineering
+            </option>
+            <option value="Life" className={styles.option}>
+              Life
+            </option>
           </select>
         </div>
         <div className={styles.intro1}>
