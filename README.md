@@ -20,6 +20,7 @@ SB Blog is a platform that allows users to write and upload their own blogs. It 
 - Backed by a Prisma-powered MongoDB database.
 - Using FireBase to store the data.
 
+
 ## Getting Started
 
 To run this project locally, follow these steps:

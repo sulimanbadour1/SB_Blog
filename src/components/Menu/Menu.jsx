@@ -18,17 +18,23 @@ const getData = async (page, cat) => {
 };
 const Menu = async ({ page, cat }) => {
   const { posts, count } = await getData(page, cat);
+  const sortedPosts = posts.sort((a, b) => b.views - a.views); // Sorts in descending order of views
+  if (page > 1) {
+    return null;
+  }
   return (
-    <div className={styles.container}>
-      <h2 className={styles.subtitle}>Trending</h2>
-      <h1 className={styles.title}>Editor Choice</h1>
-      {/* <MenuPosts withImages={false} />
+    <>
+      <div className={styles.container}>
+        <h2 className={styles.subtitle}>Trending</h2>
+        <h1 className={styles.title}>Most Viewed</h1>
+        {/* <MenuPosts withImages={false} />
       <h2 className={styles.subtitle}>Editor Choice</h2>
       <h1 className={styles.title}>Intersting Articles</h1> */}
-      {posts?.map((item) => (
-        <MenuPosts withImages={true} key={item.id} item={item} />
-      ))}
-    </div>
+        {sortedPosts?.map((item) => (
+          <MenuPosts withImages={true} key={item.id} item={item} />
+        ))}
+      </div>
+    </>
   );
 };
 

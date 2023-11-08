@@ -18,3 +18,8 @@
     position: absolute;
     transition: all 0.3s ease-in-out;
 }
+
+.ball.left{
+    background-color: #fff;
+    left: 0;
+}

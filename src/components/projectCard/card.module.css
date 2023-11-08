@@ -1,8 +1,16 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem; /* mt-8 */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+   
+}
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     width: 360px;
     height: max-content;
     padding:  0px 0px 20px 0px;
@@ -25,7 +33,7 @@
     object-fit: cover;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    overflow: hidden;
    
 }
 
@@ -44,8 +52,9 @@
 .image{
     border-radius: 12px 12px 1px 1px;
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover; 
+    padding: 0px 0px 8px 0px;
 }
 .title{
     font-size: 1.5rem;
@@ -53,9 +62,12 @@
     text-align: center;
 }
 .desc{
-    font-size: 1rem;
+    padding: 6px 12px 6px 12px;
+    color: var(--softTextColor);
+    font-size: 14px;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
+    line-height: 1.4;
 }
 
 .link{

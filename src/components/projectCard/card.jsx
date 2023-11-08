@@ -1,76 +1,91 @@
-"use client";
-
 import Link from "next/link";
 import styles from "./card.module.css";
 import Image from "next/image";
 const projects = [
   {
-    title: "Better Ask PDF",
+    title: "Local Movie Streamer",
     description:
-      " SAAS product designed to empower users by allowing them to upload and interactively engage with PDF files. Leveraging the power of Next.js, Tailwind CSS, NeonDB, Stripe, and OpenAI.",
-    image: "/betterask.webp",
-    source_code: "https://github.com/sulimanbadour1/betteraskpdf",
+      "MERN-based application designed for streaming local movies through a sleek web interface. It enables users to search their movie collection, watch movies, add subtitles, and control streaming from any device connected to their local network.",
+    image: "/local.jpg",
+    source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
   },
   {
-    title: "The North Face App",
+    title: "TensoDrone",
     description:
-      "An e-commerce mobile app for the brand The North Face, which allows users to browse the latest products, order and checkout. Also, It allow tracking the order and get notifications.",
-    image: "/betterask.webp",
-    source_code: "https://www.behance.net/gallery/141974421/3D-Mosaic",
+      "Tensodrone that do not break Tensodrone is a multi-rotor UAV of a new design with collision protection, made on the principle of tensegrity. This approach allows for the combination of the protective cage and the airframe in one structure, increasing impact resistance with less weigh",
+    image: "/folio/tenso.webp",
+    source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
   },
   {
     title: "Little Lemon Restaurant",
     description:
-      "A full responsive website for a restaurant in Prague, which allows users to browse the menu, reserve a table  order and checkout. Also, it has a dashboard for the restaurant owners.",
-    image: "/betterask.webp",
+      "A full responsive website for a restaurant in Prague, which allows users to browse the menu, reserve a table  order and checkout. Also, it has a dashboard for the restaurant owners to track expenses, reservarions and payrolls.",
+    image: "/folio/lemon.webp",
     source_code: "https://github.com/sulimanbadour1/Meta_Capstone_Project",
   },
-  {
-    title: "3D portfolio",
-    description:
-      "A 3d portfolio created using vite, three js and three drei. with contact me form and resume download. Integrated with GSAP for animations, and react-three-fiber for 3d rendering.",
-    image: "/betterask.webp",
-    source_code: "https://github.com/sulimanbadour1/My_new_portfolio",
-  },
+  // {
+  //   title: "Reminder 4 u",
+  //   description:
+  //     " A full-stack reminder app leveraging modern technologies to provide an efficient and user-friendly platform for setting and managing reminders using NextJs.",
+  //   image: "/folio/reminder.jpg",
+  //   source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
+  // },
+  // {
+  //   title: "Shirt Store AI",
+  //   description:
+  //     "Web-based platform that allows users to create and share their own custom t-shirt designs using DALL.E, change colors to save thier own choosen design, and order them for printing and delivery.",
+  //   image: "/folio/shirt.png",
+  //   source_code: "https://github.com/sulimanbadour1/AI_shirt_SAAS_3js",
+  // },
+
+  // {
+  //   title: "3D portfolio",
+  //   description:
+  //     "A 3d portfolio created using vite, three js and three drei. with contact me form and resume download. Integrated with GSAP for animations, and react-three-fiber for 3d rendering.",
+  //   image: "/folio/threefolio.webp",
+  //   source_code: "https://github.com/sulimanbadour1/My_new_portfolio",
+  // },
 
   {
-    title: "Shirt Store AI",
-    description:
-      "Web-based platform that allows users to create and share their own custom t-shirt designs using DALL.E, change colors to save thier own choosen design, and order them for printing and delivery.",
-    image: "/betterask.webp",
-    source_code: "https://github.com/sulimanbadour1/AI_shirt_SAAS_3js",
-  },
-  {
-    title: "3D Mosaic",
-    description:
-      "E-Commerce Website for a Furniture Company which helps users to try, Scan its products in 3D via AR technology and take orders from clients, build products as the customer needs.",
-    image: "/betterask.webp",
-    source_code: "https://www.behance.net/gallery/141974421/3D-Mosaic",
+    title: "My Portfolio",
+    description: "My portfolio built with react and Tailwind CSS.",
+    image: "/folio/site.gif",
+    source_code: "https://github.com/sulimanbadour1/Sul_folio",
   },
 ];
 const ProjectsCard = () => {
   return (
     <>
-      <div className={styles.card}>
-        <Image
-          src="/karl.webp"
-          alt="Picture of the author"
-          width={200}
-          height={200}
-          className={styles.image}
-        />
-        <div className={styles.cardImage}></div>
-        <div className={styles.cardContent}>
-          <h3 className={styles.title}>Project Title</h3>
-          <p className={styles.desc}>Project Description</p>
-          <Link
-            className={styles.link}
-            href="/projects/project"
-            target="_blank"
-          >
-            <Image src="/githubColor.svg" width={36} height={36} alt="git" />
-          </Link>
-        </div>
+      <div className={styles.cards}>
+        {projects.map((project) => (
+          <div className={styles.card} key={project.title}>
+            <div className={styles.cardImage}>
+              <Image
+                src={project.image}
+                alt="Picture of the author"
+                width={500}
+                height={300}
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.cardContent}>
+              <h3 className={styles.title}>{project.title}</h3>
+              <p className={styles.desc}>{project.description}</p>
+              <Link
+                className={styles.link}
+                href={project.source_code}
+                target="_blank"
+              >
+                <Image
+                  src="/githubColor.svg"
+                  width={36}
+                  height={36}
+                  alt="git"
+                />
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

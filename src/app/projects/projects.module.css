@@ -130,7 +130,15 @@ text-transform: uppercase;
   }
 }
 
-
+.title{
+  margin-top: 40px;
+}
+.desc{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--softTextColor);
+}
 
 
 

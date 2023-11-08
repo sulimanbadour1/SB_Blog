@@ -13,7 +13,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-
+import toast from "react-hot-toast";
 const modules = {
   toolbar: [
     [{ font: [] }],
@@ -196,6 +196,7 @@ const Write = () => {
       </div>
       <button onClick={handleSubmit} className={styles.publish}>
         Publish
+        {toast.success("Post Published")}
       </button>
     </div>
   );

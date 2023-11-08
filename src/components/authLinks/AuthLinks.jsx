@@ -3,9 +3,11 @@ import Link from "next/link";
 import styles from "./AuthLinks.module.css";
 import { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
+  const [list, setList] = useState(false);
   const { status } = useSession();
   return (
     <>
@@ -18,9 +20,27 @@ const AuthLinks = () => {
           <Link href="/write" className={styles.link}>
             Write
           </Link>
-          {/* <Link href="/profile" className={styles.link}>
-            Profile
-          </Link> */}
+          {/* <div className={styles.dropdown}>
+            <button className={styles.dropbtn} onClick={() => setList(!list)}>
+              Write
+            </button>
+            {list && (
+              <div
+                className={styles.dropdownContent}
+                style={{ display: list ? "block" : "none" }}
+              >
+                <div className={styles.items}>
+                  <Link href="/write" className={styles.link1}>
+                    Post
+                  </Link>
+                  <Link href="/projects" className={styles.link1}>
+                    Project
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div> */}
+
           <span className={styles.link} onClick={signOut}>
             Logout
           </span>
@@ -42,7 +62,7 @@ const AuthLinks = () => {
             <>
               <Link href="/write">Write</Link>
               {/* <Link href="/profile">Profile</Link> */}
-              <span className={styles.link} onClick={signOut}>
+              <span className={styles.link1} onClick={signOut}>
                 Logout
               </span>
             </>
