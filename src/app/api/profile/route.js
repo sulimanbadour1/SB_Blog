@@ -13,10 +13,12 @@ export const GET = async (req) => {
     // Fetch the user data for the logged-in user
     const user = await prisma.User.findUnique({
       where: { email: session.user.email },
+      include: { post: true },
+      where: { email: session.user.email },
     });
     return new NextResponse(JSON.stringify(user, { status: 200 }));
   } catch (err) {
-    console.log(err);
+    console.log("There is an Error", err);
     return new NextResponse(
       JSON.stringify(
         { message: "SomeThing is wrong with fetching the user data" },

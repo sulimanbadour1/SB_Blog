@@ -1,17 +1,46 @@
 "use client";
+import toast from "react-hot-toast";
 import styles from "./contact.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const validateForm = () => {
+    if (name.length < 5 || name.length > 20) {
+      toast.error("Name must be between 5 and 20 characters");
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Invalid email format");
+      return false;
+    }
+
+    if (message.length < 10 || message.length > 500) {
+      toast.error("Message must be between 10 and 500 characters");
+      return false;
+    }
+
+    return true;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setLoading(true);
-    const data = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
+    const formData = {
+      name,
+      email,
+      message,
     };
 
     const response = await fetch("/api/contact", {
@@ -19,57 +48,52 @@ const ContactForm = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(formData),
     });
 
+    setLoading(false);
+
     if (response.ok) {
-      console.log("Message sent successfully");
-      setLoading(false);
-      // reset the form
-      event.target.name.value = "";
-      event.target.email.value = "";
-      event.target.message.value = "";
-    }
-    if (!response.ok) {
-      console.log("Error sending message");
-      setLoading(false);
+      toast.success("Message sent successfully");
+      e.target.reset(); // Reset the form after successful submission
+      setName("");
+      setEmail("");
+      setMessage("");
+    } else {
+      console.error("Error sending message");
+      toast.error("Error sending message");
     }
   };
+
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
         <h1 className={styles.title}>Get In Touch</h1>
         <input
-          min={5}
-          max={20}
           name="name"
-          required
           type="text"
           className={styles.feedbackInput}
           placeholder="Name"
-          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-        {}
         <input
-          min={5}
-          max={20}
           name="email"
-          id="email"
-          required
-          type="text"
+          type="email"
           className={styles.feedbackInput}
           placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
-          required
           name="message"
-          minLength={10}
-          maxLength={500}
           className={styles.feedbackInput}
           placeholder="Message"
           rows={4}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button type="submit" className={styles.button}>
+        <button type="submit" className={styles.button} disabled={loading}>
           {loading ? "Loading..." : "Send Message"}
         </button>
       </form>
