@@ -7,7 +7,7 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
-
+export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Suliman Badour Blog",
   description: "This is my blog where I write about my journey.",
