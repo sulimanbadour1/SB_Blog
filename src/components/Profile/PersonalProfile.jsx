@@ -15,7 +15,7 @@ const PersonalPage = () => {
     const fetchData = async () => {
       if (session) {
         try {
-          const res = await fetch("http://localhost:3000/api/profile", {
+          const res = await fetch(`${process.env.URL}/api/profile`, {
             method: "GET",
             headers: {
               Authorization: `Bearer ${session.accessToken}`, // Assuming accessToken is stored in session

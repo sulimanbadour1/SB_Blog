@@ -6,7 +6,7 @@ import MenuPosts from "../menuPosts/MenuPosts";
 // Fetch data from external API
 const getData = async (page, cat) => {
   const res = await fetch(
-    `http://localhost:3000/api/menu?page=${page}&cat=${cat || ""}`,
+    `${process.env.URL}/api/menu?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }
