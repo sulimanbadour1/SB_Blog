@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./about.module.css";
 import Skills from "@/components/Skills/Skills";
 import Link from "next/link";
-import ScrollBar from "@/components/Isights/insights";
+import ScrollBar from "@/components/Isights/ScrollBar";
 
 const page = () => {
   return (

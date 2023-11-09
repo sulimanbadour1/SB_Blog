@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { app } from "@/utils/firebase";
 import { getStorage } from "firebase/storage";
-import ScrollBar from "@/components/Isights/Insights";
+import ScrollBar from "@/components/Isights/ScrollBar";
 const storage = getStorage(app);
 const page = () => {
   // const { status } = useSession();
