@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./Write.module.css";
 import { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -14,6 +14,7 @@ import {
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
 import toast from "react-hot-toast";
+import dynamic from "next/dynamic";
 const modules = {
   toolbar: [
     [{ font: [] }],
@@ -35,6 +36,7 @@ const modules = {
 const storage = getStorage(app);
 const Write = () => {
   const { status } = useSession();
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false }); // No server side rendering
 
   const router = useRouter();
   // files upload

@@ -41,7 +41,7 @@
    flex: 1;
    height: 300px;
    position: relative;
-   margin-bottom: 50px;
+   margin-bottom: 30px;
 }
 .videoCont{
   flex: 1;
@@ -63,7 +63,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .userName{
@@ -72,7 +73,7 @@
 
 }
 .title{
-    font-size: 64px;
+    font-size: 60px;
 }
 .image{
     object-fit: cover;
@@ -84,7 +85,13 @@
 }
 .post{
     flex: 5;
-    margin-top: 60px;
+    margin-top: 40px;
+}
+
+.smallDesc{
+    font-size: 20px;
+   margin-top: 24px;
+    font-weight: 500;
 }
 
 .desc p{

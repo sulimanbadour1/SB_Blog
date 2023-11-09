@@ -5,8 +5,10 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 const page = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data, status } = useSession();
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   if (status === "loading") {
     return <div className={styles.loading}>Loading...</div>;

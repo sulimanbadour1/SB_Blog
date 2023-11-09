@@ -65,6 +65,12 @@ const Footer = () => {
             <Link href="/blog?cat=Science" className={styles.linkStyle}>
               Science
             </Link>
+            <Link href="/blog?cat=Style" className={styles.linkStyle}>
+              Style
+            </Link>
+            <Link href="/blog?cat=Life" className={styles.linkStyle}>
+              Life
+            </Link>
           </div>
           <div className={styles.list}>
             <span className={styles.listTitle}>Socials</span>
@@ -99,6 +105,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div className={styles.rights}>
         <p>2023 © All rights reserved.</p>
         <p>
