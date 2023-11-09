@@ -15,6 +15,7 @@ import {
 import { app } from "@/utils/firebase";
 import toast from "react-hot-toast";
 import dynamic from "next/dynamic";
+
 const modules = {
   toolbar: [
     [{ font: [] }],
@@ -34,6 +35,7 @@ const modules = {
   ],
 };
 const storage = getStorage(app);
+
 const Write = () => {
   const { status } = useSession();
   const ReactQuill = dynamic(() => import("react-quill"), { ssr: false }); // No server side rendering

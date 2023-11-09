@@ -4,6 +4,7 @@ import styles from "./login.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
+export const dynamic = "force-dynamic";
 const page = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { data, status } = useSession();

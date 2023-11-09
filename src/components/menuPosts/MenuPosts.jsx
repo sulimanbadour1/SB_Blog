@@ -7,7 +7,7 @@ const MenuPosts = async ({ withImages, item, key }) => {
   const isVideo = item.img && item.img.includes("Video");
   return (
     <>
-      <div className={styles.items} key={key}>
+      <div className={styles.items} key={item.id}>
         <Link href={`/posts/${item.slug}`} className={styles.item}>
           {withImages && (
             <div className={styles.imageContainer}>

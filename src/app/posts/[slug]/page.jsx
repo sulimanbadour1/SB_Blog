@@ -15,6 +15,7 @@ const getData = async (slug) => {
   }
   return res.json();
 };
+export const dynamic = "force-dynamic";
 const page = async ({ params, searchParams }) => {
   const { slug } = params;
   const data = await getData(slug);
