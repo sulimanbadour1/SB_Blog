@@ -1,7 +1,23 @@
 import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
 import { getSession } from "next-auth/react";
+import { cookies } from "next/headers";
+export const dynamic = "force-dynamic";
+//
+async function getCookieData() {
+  const cookieData = cookies().getAll();
+  return new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(cookieData);
+    }, 1000)
+  );
+}
 
+export default async function Page() {
+  const cookieData = await getCookieData();
+  return <div>Hello World</div>;
+} //
+//
 export const GET = async (req) => {
   try {
     // Extract session information
