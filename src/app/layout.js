@@ -10,20 +10,13 @@ const inter = Inter({ subsets: ["latin"] });
 export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Suliman Badour Blog",
-  description: "This is my blog where I write about my journey.",
+  description:
+    "⭐ Suliman's Personal Blog ⭐ This is my digital sanctuary, a canvas for thoughts, ideas.",
   headline: "Suliman Badour Blog",
-  openGraph: {
-    url: "https://sb-blog-silk.vercel.app/",
-    site_name: "Suliman Badour Blog",
-    images: [
-      {
-        url: "https://sb-blog-silk.vercel.app/logos/logo-white.svg",
-        width: 1200,
-        height: 630,
-        alt: "Suliman Badour Blog",
-      },
-    ],
-  },
+  url: "https://sb-blog-silk.vercel.app/",
+  image:
+    "https://sb-blog-silk.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo1.b8a63552.png&w=128&q=75",
+  site_name: "Suliman Badour Blog",
 };
 
 export default function RootLayout({ children }) {
