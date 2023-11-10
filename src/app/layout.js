@@ -21,7 +21,7 @@ export const metadata = {
       "⭐ Suliman's Personal Blog ⭐ Reach For The Stars, Persevere, Excel!.",
     images: [
       {
-        url: "https://sb-blog-silk.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo1.b8a63552.png&w=128&q=75",
+        url: "https://github.com/sulimanbadour1/SB_Blog/raw/main/public/logos/png/logo-black.png?raw=true",
         width: 1200,
         height: 630,
         alt: "Suliman Badour Blog",
