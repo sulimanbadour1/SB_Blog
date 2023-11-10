@@ -24,7 +24,7 @@ export default function Home({ searchParams }) {
         <meta property="og:site_name" content={metadata.site_name} />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:card" content="Share on X" />
         <meta property="twitter:url" content={metadata.url} />
         <meta property="twitter:title" content={metadata.title} />
         <meta property="twitter:description" content={metadata.description} />

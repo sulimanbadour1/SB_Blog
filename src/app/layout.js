@@ -15,7 +15,7 @@ export const metadata = {
   headline: "Suliman Badour Blog",
   url: "https://sb-blog-silk.vercel.app/",
   image:
-    "https://sb-blog-silk.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo1.b8a63552.png&w=128&q=75",
+    "https://raw.githubusercontent.com/sulimanbadour1/SB_Blog/main/public/logos/png/logo-black.png",
   site_name: "Suliman Badour Blog",
 };
 

@@ -16,7 +16,7 @@
   .views{
     display: flex;
     align-items: center;
-    padding-top: 2px;
+    margin-top: 8px;
     font-weight: bold;
   }
   
@@ -65,20 +65,15 @@
   .category{
     padding: 3px 8px;
    border-radius: 10px;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
     width: max-content;
   }
   
   .category.travel{
-    background-color: #c88107;
+    background-color: #2f1b07;
   }
-  .category.culture{
-    background-color: #034d33;
-  }
-  .category.art{
-    background-color: #9c339d;
-  }
+ 
   .postTitle{
     font-size: 18;
     font-weight: 500;
@@ -86,12 +81,13 @@
   }
   
   .details{
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 8px;
   
   }
   
   .date{
-    color: gray;
+    color: var(--softTextColor)
   }
   
   
