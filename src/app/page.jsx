@@ -29,8 +29,6 @@ export default function Home({ searchParams }) {
         <meta property="twitter:title" content={metadata.title} />
         <meta property="twitter:description" content={metadata.description} />
         <meta property="twitter:image" content={metadata.image} />
-
-        {/* Additional tags for LinkedIn and other platforms as needed */}
       </Head>
       <div className={styles.container}>
         <Featured />
