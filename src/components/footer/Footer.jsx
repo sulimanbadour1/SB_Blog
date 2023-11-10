@@ -5,6 +5,7 @@ import Logo from "../Logo/logo";
 import Socials from "../SocialIcons/Socials";
 import SocialsFooter from "../SocialIcons/SocialsFooter";
 import Link from "next/link";
+import Button from "../button/Button";
 
 const Footer = () => {
   return (
@@ -102,10 +103,17 @@ const Footer = () => {
             >
               YouTube
             </Link>
+            <Link
+              target="_blank"
+              className={styles.linkStyle}
+              href="https://sulimanbadour.com/"
+            >
+              Portfolio
+            </Link>
           </div>
         </div>
       </div>
-
+      <Button />
       <div className={styles.rights}>
         <p>2023 © All rights reserved.</p>
         <p>
