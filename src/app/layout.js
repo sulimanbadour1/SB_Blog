@@ -12,10 +12,22 @@ export const metadata = {
   title: "Suliman Badour Blog",
   description:
     "⭐ Suliman's Personal Blog ⭐ This is my digital sanctuary, a canvas for thoughts, ideas.",
-  headline: "Suliman Badour Blog",
-  url: "https://sb-blog-silk.vercel.app/",
-  image: "https://sb-blog-silk.vercel.app/logos/logo-white.svg",
-  site_name: "Suliman Badour Blog",
+  headline: "⭐ Suliman's Personal Blog ⭐",
+  openGraph: {
+    url: "https://sb-blog-silk.vercel.app/",
+    site_name: "Suliman Badour Blog",
+    title: "Suliman Badour Blog",
+    description:
+      "⭐ Suliman's Personal Blog ⭐ Reach For The Stars, Persevere, Excel!.",
+    images: [
+      {
+        url: "https://sb-blog-silk.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo1.b8a63552.png&w=128&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Suliman Badour Blog",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
