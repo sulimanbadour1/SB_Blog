@@ -3,8 +3,9 @@ import Image from "next/image";
 import styles from "./Write.module.css";
 import { useEffect, useRef, useState } from "react";
 // import ReactQuill from "react-quill";
-
+import "quill/dist/quill.snow.css";
 import "react-quill/dist/quill.snow.css";
+import "react-quill/dist/quill.bubble.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import {
@@ -16,14 +17,14 @@ import {
 import { app } from "@/utils/firebase";
 import toast from "react-hot-toast";
 import dynamic from "next/dynamic";
+// image resize
+
+// this is ReactQuill editor
 const ReactQuill = dynamic(() => import("react-quill"), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
 }); // No server side rendering
 
-// this is TinyMCE editor
-
-// this is TinyMCE editor
 const modules = {
   toolbar: [
     [{ font: [] }],
@@ -38,12 +39,12 @@ const modules = {
     [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
     [{ direction: "rtl" }], // text direction
     ["link"],
-
+    ["clean"],
     [{ align: [] }],
   ],
   clipboard: {
     // toggle to add extra line breaks when pasting HTML:
-    matchVisual: false,
+    matchVisual: true,
   },
 };
 const storage = getStorage(app);
@@ -296,10 +297,10 @@ const Write = () => {
       <div className={styles.editor}>
         <ReactQuill
           className={styles.textArea}
-          theme="bubble"
-          modules={modules}
+          theme="snow"
           value={value}
           min={10}
+          modules={modules}
           required
           onChange={setValue}
           placeholder="Write your Post..."
