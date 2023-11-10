@@ -39,6 +39,7 @@ const modules = {
     [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
     [{ direction: "rtl" }], // text direction
     ["link"],
+    ["video"],
     ["clean"],
     [{ align: [] }],
   ],
