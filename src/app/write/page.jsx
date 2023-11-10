@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./Write.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // import ReactQuill from "react-quill";
 
 import "react-quill/dist/quill.snow.css";
@@ -16,7 +16,14 @@ import {
 import { app } from "@/utils/firebase";
 import toast from "react-hot-toast";
 import dynamic from "next/dynamic";
+const ReactQuill = dynamic(() => import("react-quill"), {
+  ssr: false,
+  loading: () => <p>Loading ...</p>,
+}); // No server side rendering
 
+// this is TinyMCE editor
+
+// this is TinyMCE editor
 const modules = {
   toolbar: [
     [{ font: [] }],
@@ -34,12 +41,15 @@ const modules = {
 
     [{ align: [] }],
   ],
+  clipboard: {
+    // toggle to add extra line breaks when pasting HTML:
+    matchVisual: false,
+  },
 };
 const storage = getStorage(app);
 
 const Write = () => {
   const { status } = useSession();
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false }); // No server side rendering
 
   const router = useRouter();
   // files upload
@@ -51,7 +61,6 @@ const Write = () => {
   const [title, setTitle] = useState("");
   const [summ, setSumm] = useState("");
   const [catSlug, setCatSlug] = useState("");
-  // auth check
 
   // upload image to firebase
   useEffect(() => {
@@ -162,21 +171,22 @@ const Write = () => {
 
   return (
     <div className={styles.container}>
-      <input
-        className={styles.input}
-        type="text"
-        placeholder="Add Title..."
-        required
-        min={6}
-        onChange={(e) => setTitle(e.target.value)}
-      />
+      <div className={styles.header}>
+        <h1 className={styles.h1}>
+          Write your post here, you can add a title, summary , descritpion and
+          one image or video.{" "}
+        </h1>
+      </div>
       <div className={styles.intro}>
         <div className={styles.intro1}>
-          <span id="span" className={styles.options}>
-            select category
-          </span>
+          <label htmlFor="select">
+            <span id="span" className={styles.options}>
+              select category
+            </span>
+          </label>
           <div>
             <select
+              id="select"
               className={styles.select}
               onChange={(e) => setCatSlug(e.target.value)}
             >
@@ -263,20 +273,30 @@ const Write = () => {
           </div>
         </div>
       </div>
-      <input
-        className={styles.descInput}
-        type="text"
-        placeholder="Add Small Description here..."
-        required
-        min={6}
-        onChange={(e) => setSumm(e.target.value)}
-      />
+      <div className={styles.titleDesc}>
+        <input
+          className={styles.input}
+          type="text"
+          placeholder="Add Title..."
+          required
+          min={6}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          className={styles.descInput}
+          type="text"
+          placeholder="Add Summary..."
+          required
+          min={6}
+          onChange={(e) => setSumm(e.target.value)}
+        />
+      </div>
       {/* {status === "unauthenticated" && router.push("/login")} */}
 
       <div className={styles.editor}>
         <ReactQuill
           className={styles.textArea}
-          theme="snow"
+          theme="bubble"
           modules={modules}
           value={value}
           min={10}

@@ -13,6 +13,7 @@
     "@auth/prisma-adapter": "^1.0.5",
     "@clerk/nextjs": "^4.26.2",
     "@prisma/client": "^5.5.2",
+    "@tinymce/tinymce-react": "^4.3.0",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "firebase": "^10.5.2",
