@@ -3,6 +3,7 @@ import styles from "./homepage.module.css";
 import CategoryList from "@/components/CategoryList/CategoryList";
 import CardList from "@/components/CardList/CardList";
 import Menu from "@/components/Menu/Menu";
+import ScrollBar from "@/components/Isights/ScrollBar";
 export const dynamic = "force-dynamic";
 
 export default function Home({ searchParams }) {
@@ -15,6 +16,7 @@ export default function Home({ searchParams }) {
         <CardList page={page} />
         <Menu page={page} />
       </div>
+      <ScrollBar />
     </div>
   );
 }

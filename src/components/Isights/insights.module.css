@@ -19,11 +19,15 @@
     letter-spacing: wider;
     font-size: 0.875rem; /* text-sm */
 }
-@media screen and (min-width: 640px) { /* sm breakpoint */
+@media screen and (max-width: 640px) { /* sm breakpoint */
     .innerDiv {
         padding-top: 0.75rem; /* sm:py-3 */
         padding-bottom: 0.75rem; /* sm:py-3 */
         font-size: 1rem; /* sm:text-base */
+    }
+    .outerDiv{
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 
