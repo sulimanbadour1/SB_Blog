@@ -24,7 +24,7 @@ const projects = [
     description:
       "Suliman Badour's Blog is an insightful and engaging online platform where Suliman shares his personal journey and experiences. This blog features a variety of content ranging from personal projeccts to shared insights.",
     image: "/folio/landing.webp",
-    source_code: "https://sb-blog-silk.vercel.app/",
+    source_code: "https://github.com/sulimanbadour1/SB_Blog",
     live: "https://sb-blog-silk.vercel.app/",
     status: "This Blog",
   },
@@ -33,7 +33,7 @@ const projects = [
     description:
       " A full-stack reminder app leveraging modern technologies to provide an efficient and user-friendly platform for setting and managing reminders using NextJs.",
     image: "/folio/reminder.webp",
-    source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
+    source_code: "https://github.com/sulimanbadour1/Reminder_NextJs",
     live: "https://reminder4u.vercel.app/",
     status: "Up and Running",
   },
