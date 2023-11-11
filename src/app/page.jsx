@@ -16,7 +16,6 @@ export default function Home({ searchParams }) {
         <CardList page={page} />
         <Menu page={page} />
       </div>
-      <ScrollBar />
     </div>
   );
 }

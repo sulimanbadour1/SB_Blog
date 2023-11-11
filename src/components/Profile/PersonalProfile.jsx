@@ -5,6 +5,7 @@ import { useSession, getSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
+import { data } from "autoprefixer";
 
 const PersonalPage = () => {
   const { data: session } = useSession();
@@ -61,6 +62,20 @@ const PersonalPage = () => {
 
           <span className={styles.name}>Name : {session.user.name}</span>
           <span className={styles.name}>Email : {session.user.email}</span>
+          {userData.posts && (
+            <div className={styles.posts}>
+              <h2>Your Posts:</h2>
+              <ul>
+                {userData.posts.map((post) => (
+                  <li key={post.id}>
+                    <Link href={`/posts/${post.slug}`}>
+                      <a>{post.title}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -44,7 +44,7 @@ const projects = [
     image: "/folio/lemon.webp",
     source_code: "https://github.com/sulimanbadour1/Meta_Capstone_Project",
     live: "https://meta-capstone-project-mocha.vercel.app/",
-    status: "Meta Frontend Certificate Project",
+    status: "Meta Frontend Certificate Project Archive",
   },
 
   {
@@ -53,8 +53,8 @@ const projects = [
       "Web-based platform that allows users to create and share their own custom t-shirt designs using DALL.E, change colors to save thier own choosen design, and order them for printing and delivery.",
     image: "/folio/shirt.png",
     source_code: "https://github.com/sulimanbadour1/AI_shirt_SAAS_3js",
-    live: "",
-    status: "Archived",
+    live: "https://ai-shirt-saas-3js.vercel.app/",
+    status: "Up and Running",
   },
 
   // {
