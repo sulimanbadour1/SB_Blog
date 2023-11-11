@@ -36,7 +36,17 @@
     overflow: hidden;
    
 }
-
+.status{
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(211, 62, 62);
+    margin-top: -22px;
+    border: 2px solid rgb(211, 62, 62);
+    padding: 2px;
+    border-radius: 4px;
+}
 .cardContent{
     margin-top: 12px;
     width: 100%;
