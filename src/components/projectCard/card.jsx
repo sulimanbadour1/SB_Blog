@@ -10,14 +10,7 @@ const projects = [
     source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
     live: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
   },
-  {
-    title: "TensoDrone",
-    description:
-      "Tensodrone that do not break Tensodrone is a multi-rotor UAV of a new design with collision protection, made on the principle of tensegrity. This approach allows for the combination of the protective cage and the airframe in one structure.",
-    image: "/folio/tenso.webp",
-    source_code: "https://youtu.be/4dEewzDinpA?si=mDr_0uGttM8NGZJ6",
-    live: "https://youtu.be/4dEewzDinpA?si=mDr_0uGttM8NGZJ6",
-  },
+
   {
     title: "Little Lemon Restaurant",
     description:
@@ -26,13 +19,14 @@ const projects = [
     source_code: "https://github.com/sulimanbadour1/Meta_Capstone_Project",
     live: "https://meta-capstone-project-mocha.vercel.app/",
   },
-  // {
-  //   title: "Reminder 4 u",
-  //   description:
-  //     " A full-stack reminder app leveraging modern technologies to provide an efficient and user-friendly platform for setting and managing reminders using NextJs.",
-  //   image: "/folio/reminder.jpg",
-  //   source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
-  // },
+  {
+    title: "Reminder 4 u",
+    description:
+      " A full-stack reminder app leveraging modern technologies to provide an efficient and user-friendly platform for setting and managing reminders using NextJs.",
+    image: "/folio/reminder1.jpg",
+    source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
+    live: "https://reminder4u.vercel.app/",
+  },
   // {
   //   title: "Shirt Store AI",
   //   description:
@@ -47,8 +41,16 @@ const projects = [
   //     "A 3d portfolio created using vite, three js and three drei. with contact me form and resume download. Integrated with GSAP for animations, and react-three-fiber for 3d rendering.",
   //   image: "/folio/threefolio.webp",
   //   source_code: "https://github.com/sulimanbadour1/My_new_portfolio",
+  //   live: "",
   // },
-
+  {
+    title: "TensoDrone",
+    description:
+      "Tensodrone that do not break Tensodrone is a multi-rotor UAV of a new design with collision protection, made on the principle of tensegrity. This approach allows for the combination of the protective cage and the airframe in one structure.",
+    image: "/folio/tenso.webp",
+    source_code: "https://youtu.be/4dEewzDinpA?si=mDr_0uGttM8NGZJ6",
+    live: "https://youtu.be/4dEewzDinpA?si=mDr_0uGttM8NGZJ6",
+  },
   {
     title: "My Portfolio",
     description: "My portfolio built with react and Tailwind CSS.",
