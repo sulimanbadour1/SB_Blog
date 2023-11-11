@@ -8,13 +8,15 @@ const projects = [
       "MERN-based application designed for streaming local movies through a sleek web interface. It enables users to search their movie collection, watch movies, add subtitles, and control streaming from any device connected to their local network.",
     image: "/local.jpg",
     source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
+    live: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
   },
   {
     title: "TensoDrone",
     description:
-      "Tensodrone that do not break Tensodrone is a multi-rotor UAV of a new design with collision protection, made on the principle of tensegrity. This approach allows for the combination of the protective cage and the airframe in one structure, increasing impact resistance with less weigh",
+      "Tensodrone that do not break Tensodrone is a multi-rotor UAV of a new design with collision protection, made on the principle of tensegrity. This approach allows for the combination of the protective cage and the airframe in one structure.",
     image: "/folio/tenso.webp",
-    source_code: "https://github.com/sulimanbadour1/local-stream-app/tree/main",
+    source_code: "https://youtu.be/4dEewzDinpA?si=mDr_0uGttM8NGZJ6",
+    live: "https://youtu.be/4dEewzDinpA?si=mDr_0uGttM8NGZJ6",
   },
   {
     title: "Little Lemon Restaurant",
@@ -22,6 +24,7 @@ const projects = [
       "A full responsive website for a restaurant in Prague, which allows users to browse the menu, reserve a table  order and checkout. Also, it has a dashboard for the restaurant owners to track expenses, reservarions and payrolls.",
     image: "/folio/lemon.webp",
     source_code: "https://github.com/sulimanbadour1/Meta_Capstone_Project",
+    live: "https://meta-capstone-project-mocha.vercel.app/",
   },
   // {
   //   title: "Reminder 4 u",
@@ -51,6 +54,7 @@ const projects = [
     description: "My portfolio built with react and Tailwind CSS.",
     image: "/folio/site.gif",
     source_code: "https://github.com/sulimanbadour1/Sul_folio",
+    live: "https://sulimanbadour.com/",
   },
 ];
 const ProjectsCard = () => {
@@ -71,18 +75,32 @@ const ProjectsCard = () => {
             <div className={styles.cardContent}>
               <h3 className={styles.title}>{project.title}</h3>
               <p className={styles.desc}>{project.description}</p>
-              <Link
-                className={styles.link}
-                href={project.source_code}
-                target="_blank"
-              >
-                <Image
-                  src="/githubColor.svg"
-                  width={36}
-                  height={36}
-                  alt="git"
-                />
-              </Link>
+              <div className={styles.links}>
+                <Link
+                  className={styles.link}
+                  href={project.source_code}
+                  target="_blank"
+                >
+                  <Image
+                    src="/githubColor.svg"
+                    width={36}
+                    height={36}
+                    alt="git"
+                  />
+                </Link>
+                <Link
+                  className={styles.link}
+                  href={project.live}
+                  target="_blank"
+                >
+                  <Image
+                    src="/buttons/live.svg"
+                    width={36}
+                    height={36}
+                    alt="git"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         ))}
