@@ -9,11 +9,15 @@ const skills = [
   "Express",
   "Tailwind CSS",
   "Next.js",
+  "Abobe XD",
+  "Adobe Photoshop",
   "Bootstrap",
   "Three.js",
   "AWS",
   "Figma",
   "Blender",
+  "Python",
+  "Fusion 360",
   "and more...",
 ];
 const Skills = () => {

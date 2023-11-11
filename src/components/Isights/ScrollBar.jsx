@@ -4,9 +4,14 @@ const insights = [
   "10+ Projects Completed 🏆",
   "Still Learning Everyday 📝",
   "Product Designer 🖌️",
-  "Frontend Developer",
-  "UI UX Designer",
-  "Design Engineer",
+  "Frontend Developer 🖥️",
+  "UI UX Designer 🎨",
+  "Design Engineer 🛠️",
+  "Phd Candidate 🎓",
+  "Masters in Robotics 🤖",
+  "3D Printing Enthusiast 🖨️",
+  "Open Source Contributor 📖",
+  "Based in Prague 🇨🇿",
 ];
 const ScrollBar = () => {
   return (
