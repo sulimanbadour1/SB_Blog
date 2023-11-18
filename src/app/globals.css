@@ -4,7 +4,9 @@
   --softBg: #f0f0f0;
   --softTextColor: #626262;
 }
-
+* {
+  scroll-behavior: smooth;
+}
 * {
   padding: 0;
   margin: 0;
