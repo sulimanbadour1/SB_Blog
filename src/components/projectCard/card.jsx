@@ -80,7 +80,7 @@ const projects = [
       "E-Commerce Website for a Furniture Company which helps users to try, Scan its products in 3D via AR technology and take orders from clients, build products as the customer needs.",
     image: "/folio/mosaic.webp",
     source_code: "https://www.behance.net/gallery/141974421/3D-Mosaic",
-    live: "",
+    live: "https://www.behance.net/gallery/141974421/3D-Mosaic",
     status: "Product Design Project",
   },
   {
@@ -88,8 +88,9 @@ const projects = [
     description:
       "An e-commerce mobile app for the brand The North Face, which allows users to browse the latest products, order and checkout. Also, It allow tracking the order and get notifications.",
     image: "/folio/northface.webp",
-    source_code: "https://www.behance.net/gallery/141974421/3D-Mosaic",
-    live: "",
+    source_code:
+      "https://www.behance.net/gallery/138474501/The-North-Face-Mobile-Application",
+    live: "https://www.behance.net/gallery/138474501/The-North-Face-Mobile-Application",
     status: "Product Design Project",
   },
 ];
