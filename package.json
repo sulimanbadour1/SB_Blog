@@ -13,6 +13,7 @@
     "@auth/prisma-adapter": "^1.0.5",
     "@clerk/nextjs": "^4.26.2",
     "@looop/quill-image-resize-module-react": "^3.1.5",
+    "@next/third-parties": "^14.1.0",
     "@prisma/client": "^5.5.2",
     "@tinymce/tinymce-react": "^4.3.0",
     "@xeger/quill-image-actions": "^0.7.2",

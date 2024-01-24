@@ -7,6 +7,7 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
+import { GoogleAnalytics } from "@next/third-parties/google";
 export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Suliman Badour Blog",
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
           </ThemeContextProvider>
         </AuthProvider>
       </body>
+      <GoogleAnalytics gaId="G-SVPXCP1F53" />
     </html>
   );
 }
