@@ -115,7 +115,7 @@ const Footer = () => {
       </div>
       <Button />
       <div className={styles.rights}>
-        <p>2023 © All rights reserved.</p>
+        <p>2024 © All rights reserved.</p>
         <p>
           Made with ✨ by{" "}
           <a href="https://sulimanbadour.com/" target="_blank">
