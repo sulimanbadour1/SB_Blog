@@ -18,6 +18,8 @@ const skills = [
   "Blender",
   "Python",
   "Fusion 360",
+  "django",
+  "mySQL",
   "and more...",
 ];
 const Skills = () => {
