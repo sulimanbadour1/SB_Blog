@@ -75,6 +75,15 @@ const projects = [
     status: "Robotics Project",
   },
   {
+    title: "LangPilot",
+    description:
+      "LangPilot is your comprehensive language learning companion, designed to make mastering a new language both effective and enjoyable.",
+    image: "/folio/langpilot.webp",
+    source_code: "https://github.com/sulimanbadour1/langPilot",
+    live: "https://www.figma.com/file/TFT8ZTiCEB3NegdCFBb0EV/lang_pilot?type=design&mode=design&t=n8IHqxOD0Hrw9qKJ-1",
+    status: "In Progress",
+  },
+  {
     title: "3D Mosaic",
     description:
       "E-Commerce Website for a Furniture Company which helps users to try, Scan its products in 3D via AR technology and take orders from clients, build products as the customer needs.",
